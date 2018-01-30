@@ -1,10 +1,14 @@
-import config from '../../../config'
-// console.log(process.env.NODE_ENV) // npm run dev development
-// console.log(process.env.NODE_ENV) // production
-const baseUrl = process.env.NODE_ENV === 'production' ? config.build.serverUrl : config.dev.serverUrl
-// console.log(baseUrl)
 export default {
   user: {
-    getuser: baseUrl + 'getuser'
+    getuser: 'user/loginSubmit',
+    userList: 'user/list',
+    userAdd: 'user/save',
+    userRemove: 'user/remove',
+    userfindOne: 'user/findOne'
+  },
+  markdown: {
+    list: 'md/list',
+    save: 'md/save',
+    item: 'md/findOne'
   }
 }
