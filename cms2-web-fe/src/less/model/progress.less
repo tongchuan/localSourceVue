@@ -1,0 +1,88 @@
+@charset "utf-8";
+@progressbg: #d5d5d5; /*默认的背景颜色*/
+@progresscolor: #ffffff; /*默认的字体颜色*/
+@progresscolordesc: #959595; /*默认的字体颜色*/
+@progressbgactive: #ed6e03; /*激活的背景颜色*/
+@progressbgactivecolor: #ed6e03; /*激活的背景颜色*/
+
+.progress-list{
+  width: 80%;
+  height: 5px;
+  background: @progressbg;
+  border-radius: 5px;
+  margin: 30px auto;
+  li{
+    width: 25%;
+    height: 5px;
+    border-radius: 5px;
+    float: left;
+    position: relative;
+    &.active{
+      background: @progressbgactive;
+      .progress-num{
+        background: @progressbgactive;
+      }
+      .progress-desc{
+        color: @progressbgactivecolor;
+      }
+    }
+    .progress-num{
+      color: @progresscolor;
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      left:50%;
+      margin-left: -13px;
+      top: -11px;
+      background: @progressbg;
+      line-height: 25px;
+      text-align: center;
+    }
+    .progress-desc{
+      width: 100%;
+      color: @progresscolordesc;
+      text-align: center;
+      position: absolute;
+      top: 20px;
+    }
+  }
+}
+/*
+.progress-list li{
+  width: 25%;
+  height: 5px;
+  border-radius: 5px;
+  float: left;
+  position: relative;
+}
+.progress-list li.active{
+  background: #ed6e03;
+}
+.progress-list li.active .progress-num{
+  background: #ed6e03;
+}
+.progress-list li.active .progress-desc{
+  color: #ed6e03;
+}
+.progress-list li .progress-num{
+  color: #fff;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  left:50%;
+  margin-left: -13px;
+  top: -11px;
+  background: #d5d5d5;
+  line-height: 25px;
+  text-align: center;
+}
+.progress-list li .progress-desc{
+  width: 100%;
+  color: #959595;
+  text-align: center;
+  position: absolute;
+  top: 20px;
+}
+*/
